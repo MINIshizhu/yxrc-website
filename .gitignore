@@ -1,0 +1,48 @@
+# 网站文件
+*.html
+*.css
+*.js
+
+# 图片资源
+images/
+*.jpg
+*.png
+*.gif
+*.svg
+*.webp
+
+# 文档
+*.md
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 依赖
+node_modules/
+package-lock.json
+
+# 构建
+dist/
+build/
+.cache/
+
+# 日志
+*.log
+npm-debug.log*
+
+# 临时文件
+tmp/
+temp/

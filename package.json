@@ -1,0 +1,22 @@
+{
+  "name": "yxrc-website",
+  "version": "1.0.0",
+  "description": "北京悦享融创科技有限公司官方网站",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000",
+    "build": "echo 'Static site, no build required'"
+  },
+  "keywords": [
+    "安防",
+    "监控",
+    "智能化",
+    "企业官网"
+  ],
+  "author": "北京悦享融创科技有限公司",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/您的用户名/yxrc-website.git"
+  }
+}
