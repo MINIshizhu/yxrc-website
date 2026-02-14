@@ -121,86 +121,6 @@
       margin-bottom: var(--spacing-md);
     }
 
-    /* 发展历程 */
-    .timeline {
-      padding: var(--spacing-3xl) 0;
-      background: var(--bg-darker);
-    }
-
-    .timeline-container {
-      position: relative;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .timeline-container::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--gradient-primary);
-      transform: translateX(-50%);
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: var(--spacing-2xl);
-      display: flex;
-      align-items: center;
-    }
-
-    .timeline-item:nth-child(odd) {
-      flex-direction: row-reverse;
-    }
-
-    .timeline-content {
-      width: 45%;
-      background: var(--bg-card);
-      padding: var(--spacing-lg);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(0, 82, 212, 0.2);
-      transition: all var(--transition-normal);
-    }
-
-    .timeline-content:hover {
-      transform: translateY(-5px);
-      border-color: var(--primary-color);
-      box-shadow: var(--shadow-primary);
-    }
-
-    .timeline-year {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--primary-color);
-      margin-bottom: var(--spacing-xs);
-    }
-
-    .timeline-title {
-      font-size: 1.25rem;
-      font-weight: 600;
-      margin-bottom: var(--spacing-xs);
-      color: var(--text-primary);
-    }
-
-    .timeline-description {
-      color: var(--text-secondary);
-      line-height: 1.6;
-    }
-
-    .timeline-dot {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 20px;
-      height: 20px;
-      background: var(--gradient-primary);
-      border-radius: 50%;
-      border: 4px solid var(--bg-darker);
-      box-shadow: var(--shadow-primary);
-    }
-
     /* 企业资质 */
     .qualifications {
       padding: var(--spacing-3xl) 0;
@@ -423,7 +343,6 @@
           <a href="about.html" class="nav-link active dropdown-toggle">关于我们</a>
           <div class="dropdown-menu">
             <a href="about.html#intro" class="dropdown-item">公司介绍</a>
-            <a href="about.html#timeline" class="dropdown-item">发展历程</a>
             <a href="about.html#qualifications" class="dropdown-item">企业资质</a>
             <a href="about.html#team" class="dropdown-item">团队介绍</a>
             <a href="process.html" class="dropdown-item">服务流程</a>
