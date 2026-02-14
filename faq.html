@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="悦享融创FAQ常见问题解答，涵盖产品咨询、服务流程、技术支持等多个方面，帮助您快速了解安防监控系统的相关问题。">
+  <meta name="keywords" content="FAQ,常见问题,安防FAQ,监控安装问答,门禁系统问题,悦享融创问答">
+  <meta name="author" content="北京悦享融创科技有限公司">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="常见问题 - 北京悦享融创科技有限公司">
+  <meta property="og:description" content="安防监控常见问题解答，帮助您快速了解相关服务和产品。">
+  <meta property="og:type" content="website">
+
+  <title>常见问题 - 北京悦享融创科技有限公司</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+
+  <!-- 样式文件 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/animations-enhanced.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* FAQ页面专用样式 */
+
+    /* 页面头部 */
+    .page-header {
+      padding: 180px 0 100px;
+      background: var(--gradient-hero);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(0, 82, 212, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(67, 100, 247, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .page-header-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .page-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: var(--spacing-md);
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-tertiary);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* FAQ内容区 */
+    .faq-section {
+      padding: var(--spacing-3xl) 0;
+      background: var(--bg-dark);
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* FAQ分类 */
+    .faq-category {
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .faq-category-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-lg);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+    }
+
+    .faq-category-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--gradient-primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* FAQ项目 */
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid rgba(0, 82, 212, 0.15);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--spacing-md);
+      overflow: hidden;
+      transition: all var(--transition-normal);
+    }
+
+    .faq-item:hover {
+      border-color: var(--primary-color);
+      box-shadow: var(--shadow-primary);
+    }
+
+    .faq-question {
+      padding: var(--spacing-lg);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacing-md);
+      user-select: none;
+    }
+
+    .faq-question h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+      flex: 1;
+    }
+
+    .faq-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: transform var(--transition-normal);
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height var(--transition-normal);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+
+    .faq-answer-content {
+      padding: 0 var(--spacing-lg) var(--spacing-lg);
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .faq-answer-content ul {
+      list-style: disc;
+      padding-left: var(--spacing-lg);
+      margin-top: var(--spacing-xs);
+    }
+
+    .faq-answer-content li {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    /* CTA区域 */
+    .faq-cta {
+      padding: var(--spacing-3xl) 0;
+      background: var(--bg-darker);
+      text-align: center;
+    }
+
+    .faq-cta h2 {
+      font-size: 2.5rem;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .faq-cta p {
+      font-size: 1.125rem;
+      color: var(--text-tertiary);
+      margin-bottom: var(--spacing-lg);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      .page-title {
+        font-size: 2.5rem;
+      }
+
+      .faq-category-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-text">悦享融创</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li class="nav-item dropdown">
+          <a href="products.html" class="nav-link dropdown-toggle">产品中心</a>
+          <div class="dropdown-menu">
+            <a href="products.html#camera" class="dropdown-item">监控摄像头</a>
+            <a href="products.html#nvr" class="dropdown-item">录像设备</a>
+            <a href="products.html#access" class="dropdown-item">门禁系统</a>
+            <a href="products.html#alarm" class="dropdown-item">报警设备</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="solutions.html" class="nav-link dropdown-toggle">解决方案</a>
+          <div class="dropdown-menu">
+            <a href="solutions.html#park" class="dropdown-item">产业园区</a>
+            <a href="solutions.html#school" class="dropdown-item">学校教育</a>
+            <a href="solutions.html#enterprise" class="dropdown-item">企业办公</a>
+            <a href="solutions.html#government" class="dropdown-item">政府机构</a>
+          </div>
+        </li>
+        <li><a href="cases.html" class="nav-link">工程案例</a></li>
+        <li class="nav-item dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle">关于我们</a>
+          <div class="dropdown-menu">
+            <a href="about.html#intro" class="dropdown-item">公司介绍</a>
+            <a href="about.html#timeline" class="dropdown-item">发展历程</a>
+            <a href="about.html#qualifications" class="dropdown-item">企业资质</a>
+            <a href="about.html#team" class="dropdown-item">团队介绍</a>
+          </div>
+        </li>
+        <li><a href="contact.html" class="nav-link">联系我们</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面头部 -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content" data-aos="fade-up">
+        <h1 class="page-title">常见问题</h1>
+        <p class="page-subtitle">
+          快速解答您的疑惑<br>
+          如果没有找到答案，欢迎随时联系我们
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ内容 -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="faq-container">
+        <!-- 产品相关 -->
+        <div class="faq-category" data-aos="fade-up">
+          <h2 class="faq-category-title">
+            <div class="faq-category-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/>
+              </svg>
+            </div>
+            产品相关
+          </h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>监控摄像头的清晰度如何选择？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>监控摄像头清晰度选择需要根据实际应用场景决定：</p>
+                <ul>
+                  <li><strong>200万像素（1080P）</strong>：适用于一般办公区域、小型商铺</li>
+                  <li><strong>300-400万像素（2K）</strong>：适用于中型企业、园区、学校</li>
+                  <li><strong>400万像素以上（4K）</strong>：适用于大型园区、重要出入口、需要看清细节的场景</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">我们会根据您的实际需求，推荐最合适的清晰度配置。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>NVR录像机可以存储多长时间？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>录像存储时间取决于多个因素：摄像头数量、清晰度、硬盘容量、录像模式。一般来说：</p>
+                <ul>
+                  <li>4路1080P摄像头 + 2TB硬盘 ≈ 30天</li>
+                  <li>8路1080P摄像头 + 4TB硬盘 ≈ 30天</li>
+                  <li>16路2K摄像头 + 8TB硬盘 ≈ 30天</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">我们可以根据您的需求定制存储方案，通常建议至少保留30天的录像。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>如何选择合适的硬盘容量？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>硬盘容量计算公式：</p>
+                <p><strong>总容量 = 摄像头数 × 每天每路录像大小（GB）× 存储天数</strong></p>
+                <p style="margin-top: var(--spacing-sm);">参考数据（24小时连续录像）：</p>
+                <ul>
+                  <li>1080P摄像头：约20-25GB/天/路</li>
+                  <li>2K摄像头：约30-40GB/天/路</li>
+                  <li>4K摄像头：约50-60GB/天/路</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">我们建议选择监控专用硬盘（如西数紫盘、希捷酷鹰），更稳定可靠。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 服务相关 -->
+        <div class="faq-category" data-aos="fade-up">
+          <h2 class="faq-category-title">
+            <div class="faq-category-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            服务相关
+          </h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>安装周期需要多久？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>安装周期取决于项目规模和复杂度：</p>
+                <ul>
+                  <li><strong>小型项目（4-8路）</strong>：1-2天完成安装调试</li>
+                  <li><strong>中型项目（8-16路）</strong>：2-4天完成</li>
+                  <li><strong>大型项目（16路以上）</strong>：根据实际规模评估</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">从合同签订到验收，一般小型项目1周内完成，大型项目2-4周。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>是否提供上门勘测服务？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p><strong>是的，我们提供免费上门勘测服务！</strong></p>
+                <p style="margin-top: var(--spacing-sm);">服务内容包括：</p>
+                <ul>
+                  <li>现场环境评估</li>
+                  <li>点位规划建议</li>
+                  <li>设备选型推荐</li>
+                  <li>布线方案设计</li>
+                  <li>详细报价清单</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">北京市区内免费上门，勘测后3个工作日内出具详细方案。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>售后服务响应时间是多久？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>我们提供快速响应的售后服务：</p>
+                <ul>
+                  <li><strong>电话咨询</strong>：24小时热线，即时响应</li>
+                  <li><strong>远程支持</strong>：2小时内提供远程协助</li>
+                  <li><strong>上门服务</strong>：北京市区内24小时到场</li>
+                  <li><strong>紧急故障</strong>：2小时响应，4小时到场</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">质保期内免费维修，终身提供技术支持。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 技术相关 -->
+        <div class="faq-category" data-aos="fade-up">
+          <h2 class="faq-category-title">
+            <div class="faq-category-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/>
+              </svg>
+            </div>
+            技术相关
+          </h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>监控可以远程查看吗？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p><strong>当然可以！</strong>所有现代监控系统都支持远程查看功能：</p>
+                <ul>
+                  <li><strong>手机APP</strong>：支持iOS和Android，随时随地查看</li>
+                  <li><strong>电脑客户端</strong>：Windows/Mac系统均可使用</li>
+                  <li><strong>网页访问</strong>：通过浏览器直接查看</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">我们会提供详细的远程配置指导，确保您能顺利使用。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>数据安全性如何保障？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>我们采用多重安全保障措施：</p>
+                <ul>
+                  <li><strong>密码保护</strong>：所有设备设置强密码</li>
+                  <li><strong>网络隔离</strong>：建议使用独立VLAN</li>
+                  <li><strong>加密传输</strong>：支持SSL加密传输</li>
+                  <li><strong>权限管理</strong>：分级权限控制</li>
+                  <li><strong>定期维护</strong>：固件及时更新</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">我们会提供完整的安全配置方案，确保您的系统安全可靠。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>系统稳定性如何？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>我们选用的都是一线品牌设备，系统稳定性有保障：</p>
+                <ul>
+                  <li><strong>品牌保障</strong>：海康威视、大华等知名品牌</li>
+                  <li><strong>专业安装</strong>：严格按照标准施工</li>
+                  <li><strong>充分测试</strong>：交付前进行72小时压力测试</li>
+                  <li><strong>UPS保护</strong>：可选配UPS电源，防止断电损坏</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">正常使用情况下，系统故障率低于0.1%。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 合作流程 -->
+        <div class="faq-category" data-aos="fade-up">
+          <h2 class="faq-category-title">
+            <div class="faq-category-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+              </svg>
+            </div>
+            合作流程
+          </h2>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>如何获取报价？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>获取报价非常简单：</p>
+                <ul>
+                  <li><strong>电话咨询</strong>：拨打 13683314533（白经理）</li>
+                  <li><strong>在线咨询</strong>：通过网站联系表单提交需求</li>
+                  <li><strong>预约勘测</strong>：免费上门勘测后出具详细报价</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">我们会在24小时内响应您的需求，3个工作日内提供详细方案。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>是否支持定制方案？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p><strong>是的，我们专注于定制化解决方案！</strong></p>
+                <p style="margin-top: var(--spacing-sm);">每个项目我们都会：</p>
+                <ul>
+                  <li>深入了解您的具体需求</li>
+                  <li>分析现场环境和特点</li>
+                  <li>设计最优解决方案</li>
+                  <li>选择最适合的设备配置</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">无论您是小型办公室还是大型园区，我们都能提供满意的定制方案。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>付款方式有哪些？</h3>
+              <div class="faq-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                  <path d="M7 10l5 5 5-5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>我们支持多种付款方式：</p>
+                <ul>
+                  <li><strong>银行转账</strong>：对公账户转账</li>
+                  <li><strong>分期付款</strong>：大型项目可分期（30%预付款 + 60%进度款 + 10%尾款）</li>
+                  <li><strong>现金支付</strong>：小额项目可现金支付</li>
+                </ul>
+                <p style="margin-top: var(--spacing-sm);">具体付款方式可根据项目情况协商确定。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA区域 -->
+  <section class="faq-cta">
+    <div class="container">
+      <h2 data-aos="fade-up">还有其他问题？</h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+        我们的专业团队随时为您解答
+      </p>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <a href="contact.html" class="btn btn-primary btn-lg">立即咨询</a>
+        <a href="tel:13683314533" class="btn btn-secondary btn-lg" style="margin-left: var(--spacing-md);">电话咨询</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>悦享融创</h3>
+          <p>专业安防监控解决方案提供商</p>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">
+            悦享科技之利，融创安全之本
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="products.html">产品中心</a></li>
+            <li><a href="solutions.html">解决方案</a></li>
+            <li><a href="cases.html">工程案例</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>联系方式</h3>
+          <ul>
+            <li>联系人：白经理</li>
+            <li>电话：13683314533</li>
+            <li>邮箱：contact@yxrc-tech.cn</li>
+            <li>地址：北京市石景山区双峪路35号<br>爱玛裕家居购物广场X区一层X006号</li>
+            <li>工作时间：周一至周五 09:00-18:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2016-2024 北京悦享融创科技有限公司. 保留所有权利.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript 文件 -->
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/interactions-enhanced.js"></script>
+
+  <!-- FAQ交互脚本 -->
+  <script>
+    // FAQ折叠交互
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        const isActive = item.classList.contains('active');
+
+        // 关闭同类别其他项
+        const category = item.closest('.faq-category');
+        category.querySelectorAll('.faq-item').forEach(faq => {
+          faq.classList.remove('active');
+        });
+
+        // 切换当前项
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
