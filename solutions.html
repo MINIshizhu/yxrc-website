@@ -3,12 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="悦享融创解决方案 - 园区、校园、企业、政府单位安防解决方案">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="北京悦享融创提供专业安防解决方案，涵盖产业园区、学校教育、企业办公、政府机构等多个领域。定制化方案、系统集成、品质保障、全程服务。">
+  <meta name="keywords" content="安防解决方案,园区安防,校园安防,企业安防,政府安防,监控系统,门禁系统,安防工程">
+  <meta name="author" content="北京悦享融创科技有限公司">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="解决方案 - 北京悦享融创科技有限公司">
+  <meta property="og:description" content="专业安防解决方案，涵盖产业园区、学校教育、企业办公、政府机构等多个领域。定制化方案、系统集成、品质保障、全程服务。">
+  <meta property="og:type" content="website">
+
   <title>解决方案 - 北京悦享融创科技有限公司</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+
+  <!-- 样式文件 -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/animations-enhanced.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -24,6 +40,17 @@
         <li><a href="products.html" class="nav-link">产品中心</a></li>
         <li><a href="solutions.html" class="nav-link active">解决方案</a></li>
         <li><a href="cases.html" class="nav-link">工程案例</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle">关于我们</a>
+          <div class="dropdown-menu">
+            <a href="about.html#intro" class="dropdown-item">公司介绍</a>
+            <a href="about.html#timeline" class="dropdown-item">发展历程</a>
+            <a href="about.html#qualifications" class="dropdown-item">企业资质</a>
+            <a href="about.html#team" class="dropdown-item">团队介绍</a>
+            <a href="process.html" class="dropdown-item">服务流程</a>
+          </div>
+        </li>
         <li><a href="contact.html" class="nav-link">联系我们</a></li>
       </ul>
 
@@ -36,14 +63,39 @@
   </nav>
 
   <!-- 页面标题 -->
-  <section class="hero" style="min-height: 40vh; padding-top: 120px;">
+  <section class="hero" style="min-height: 50vh; padding-top: 120px;">
     <div class="particles"></div>
     <div class="container">
-      <div class="hero-content text-center">
-        <h1 class="hero-title animate-fadeInUp">解决方案</h1>
-        <p class="hero-subtitle animate-fadeInUp delay-200">
-          为不同场景提供定制化安防解决方案
+      <div class="hero-content text-center" data-aos="fade-up">
+        <div class="hero-badge">
+          <span style="margin-right: 8px;">✨</span>
+          专业定制化解决方案
+        </div>
+        <h1 class="hero-title">解决方案</h1>
+        <p class="hero-subtitle">
+          为不同场景提供定制化安防解决方案<br>
+          园区安防 · 校园安防 · 企业安防 · 政府单位
         </p>
+      </div>
+
+      <!-- 解决方案统计 -->
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-item">
+          <div class="stat-number">4+</div>
+          <div class="stat-label">解决方案</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">成功案例</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">定制化</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24h</div>
+          <div class="stat-label">方案响应</div>
+        </div>
       </div>
     </div>
   </section>
@@ -51,16 +103,16 @@
   <!-- 园区解决方案 -->
   <section class="section" id="park">
     <div class="container">
-      <div class="section-title scroll-animate">
+      <div class="section-title" data-aos="fade-up">
         <h2>园区安防解决方案</h2>
       </div>
 
       <div class="grid grid-2" style="align-items: center;">
-        <div class="scroll-animate">
+        <div data-aos="fade-right">
           <img src="images/placeholder.jpg" alt="园区安防" class="card-image" style="border-radius: var(--radius-lg);">
         </div>
 
-        <div class="scroll-animate">
+        <div data-aos="fade-left">
           <h3>智能园区综合安防系统</h3>
           <p class="card-description" style="margin-bottom: var(--spacing-md);">
             为工业园区、科技园区提供全方位安防保障，包括周界防范、视频监控、智能门禁、车辆管理等系统，实现园区安全管理的智能化、可视化。
@@ -78,7 +130,12 @@
             </ul>
           </div>
 
-          <a href="contact.html" class="btn btn-primary">咨询方案</a>
+          <a href="contact.html" class="btn btn-accent">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            咨询方案
+          </a>
         </div>
       </div>
     </div>
@@ -87,12 +144,12 @@
   <!-- 校园解决方案 -->
   <section class="section" style="background: var(--bg-light);" id="school">
     <div class="container">
-      <div class="section-title scroll-animate">
+      <div class="section-title" data-aos="fade-up">
         <h2>校园安防解决方案</h2>
       </div>
 
       <div class="grid grid-2" style="align-items: center;">
-        <div class="scroll-animate">
+        <div data-aos="fade-right">
           <h3>智慧校园安全防护系统</h3>
           <p class="card-description" style="margin-bottom: var(--spacing-md);">
             为中小学、高校提供校园安全整体解决方案，覆盖校园出入口、教学楼、宿舍、食堂等重点区域，保障师生安全。
@@ -110,10 +167,15 @@
             </ul>
           </div>
 
-          <a href="contact.html" class="btn btn-primary">咨询方案</a>
+          <a href="contact.html" class="btn btn-accent">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            咨询方案
+          </a>
         </div>
 
-        <div class="scroll-animate delay-100">
+        <div data-aos="fade-left" data-aos-delay="100">
           <img src="images/placeholder.jpg" alt="校园安防" class="card-image" style="border-radius: var(--radius-lg);">
         </div>
       </div>
@@ -123,16 +185,16 @@
   <!-- 企业解决方案 -->
   <section class="section" id="enterprise">
     <div class="container">
-      <div class="section-title scroll-animate">
+      <div class="section-title" data-aos="fade-up">
         <h2>企业安防解决方案</h2>
       </div>
 
       <div class="grid grid-2" style="align-items: center;">
-        <div class="scroll-animate">
+        <div data-aos="fade-right">
           <img src="images/placeholder.jpg" alt="企业安防" class="card-image" style="border-radius: var(--radius-lg);">
         </div>
 
-        <div class="scroll-animate">
+        <div data-aos="fade-left">
           <h3>智能化办公安防系统</h3>
           <p class="card-description" style="margin-bottom: var(--spacing-md);">
             为企业提供办公楼、会议室、数据中心等场所的智能化安防解决方案，提升办公效率，保障企业资产安全。
@@ -150,7 +212,12 @@
             </ul>
           </div>
 
-          <a href="contact.html" class="btn btn-primary">咨询方案</a>
+          <a href="contact.html" class="btn btn-accent">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            咨询方案
+          </a>
         </div>
       </div>
     </div>
@@ -159,12 +226,12 @@
   <!-- 政府单位解决方案 -->
   <section class="section" style="background: var(--bg-light);" id="government">
     <div class="container">
-      <div class="section-title scroll-animate">
+      <div class="section-title" data-aos="fade-up">
         <h2>政府单位解决方案</h2>
       </div>
 
       <div class="grid grid-2" style="align-items: center;">
-        <div class="scroll-animate">
+        <div data-aos="fade-right">
           <h3>高等级安防防护系统</h3>
           <p class="card-description" style="margin-bottom: var(--spacing-md);">
             为政府机关、事业单位提供符合国家涉密场所安全要求的高等级安防系统，确保重要场所的绝对安全。
@@ -182,10 +249,15 @@
             </ul>
           </div>
 
-          <a href="contact.html" class="btn btn-primary">咨询方案</a>
+          <a href="contact.html" class="btn btn-accent">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            咨询方案
+          </a>
         </div>
 
-        <div class="scroll-animate delay-100">
+        <div data-aos="fade-left" data-aos-delay="100">
           <img src="images/placeholder.jpg" alt="政府安防" class="card-image" style="border-radius: var(--radius-lg);">
         </div>
       </div>
@@ -195,30 +267,30 @@
   <!-- 方案优势 -->
   <section class="section">
     <div class="container">
-      <div class="section-title scroll-animate">
+      <div class="section-title" data-aos="fade-up">
         <h2>我们的优势</h2>
       </div>
 
       <div class="grid grid-4">
-        <div class="card text-center scroll-animate">
+        <div class="card card-enhanced text-center" data-aos="fade-up">
           <div class="feature-icon icon-target"><span>🎯</span></div>
           <h3 class="card-title">定制化方案</h3>
           <p class="card-description">根据客户实际需求，量身定制最适合的解决方案</p>
         </div>
 
-        <div class="card text-center scroll-animate delay-100">
+        <div class="card card-enhanced text-center" data-aos="fade-up" data-aos-delay="100">
           <div class="feature-icon icon-integration"><span>⚙️</span></div>
           <h3 class="card-title">系统集成</h3>
           <p class="card-description">多种安防系统无缝集成，统一管理平台</p>
         </div>
 
-        <div class="card text-center scroll-animate delay-200">
+        <div class="card card-enhanced text-center" data-aos="fade-up" data-aos-delay="200">
           <div class="feature-icon icon-shield"><span>🛡️</span></div>
           <h3 class="card-title">品质保障</h3>
           <p class="card-description">选用优质品牌设备，确保系统稳定可靠</p>
         </div>
 
-        <div class="card text-center scroll-animate delay-300">
+        <div class="card card-enhanced text-center" data-aos="fade-up" data-aos-delay="300">
           <div class="feature-icon icon-service"><span>🔧</span></div>
           <h3 class="card-title">全程服务</h3>
           <p class="card-description">从方案设计到实施运维，提供全生命周期服务</p>
@@ -277,5 +349,6 @@
 
   <script src="js/main.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/interactions-enhanced.js"></script>
 </body>
 </html>

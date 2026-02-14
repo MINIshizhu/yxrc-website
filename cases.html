@@ -3,12 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="悦享融创工程案例 - 500+成功案例展示">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="北京悦享融创工程案例展示，500+成功案例，涵盖产业园区、学校教育、企业办公、政府机构等多个领域。专业安防工程实施，品质保障。">
+  <meta name="keywords" content="工程案例,安防工程,园区案例,校园案例,企业案例,政府案例,安防项目,监控系统,门禁系统">
+  <meta name="author" content="北京悦享融创科技有限公司">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="工程案例 - 北京悦享融创科技有限公司">
+  <meta property="og:description" content="500+成功案例展示，涵盖产业园区、学校教育、企业办公、政府机构等多个领域。专业安防工程实施，品质保障。">
+  <meta property="og:type" content="website">
+
   <title>工程案例 - 北京悦享融创科技有限公司</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+
+  <!-- 样式文件 -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/animations-enhanced.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -24,6 +40,17 @@
         <li><a href="products.html" class="nav-link">产品中心</a></li>
         <li><a href="solutions.html" class="nav-link">解决方案</a></li>
         <li><a href="cases.html" class="nav-link active">工程案例</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle">关于我们</a>
+          <div class="dropdown-menu">
+            <a href="about.html#intro" class="dropdown-item">公司介绍</a>
+            <a href="about.html#timeline" class="dropdown-item">发展历程</a>
+            <a href="about.html#qualifications" class="dropdown-item">企业资质</a>
+            <a href="about.html#team" class="dropdown-item">团队介绍</a>
+            <a href="process.html" class="dropdown-item">服务流程</a>
+          </div>
+        </li>
         <li><a href="contact.html" class="nav-link">联系我们</a></li>
       </ul>
 
@@ -36,14 +63,39 @@
   </nav>
 
   <!-- 页面标题 -->
-  <section class="hero" style="min-height: 40vh; padding-top: 120px;">
+  <section class="hero" style="min-height: 50vh; padding-top: 120px;">
     <div class="particles"></div>
     <div class="container">
-      <div class="hero-content text-center">
-        <h1 class="hero-title animate-fadeInUp">工程案例</h1>
-        <p class="hero-subtitle animate-fadeInUp delay-200">
-          500+成功案例 · 值得信赖
+      <div class="hero-content text-center" data-aos="fade-up">
+        <div class="hero-badge">
+          <span style="margin-right: 8px;">✨</span>
+          500+成功案例
+        </div>
+        <h1 class="hero-title">工程案例</h1>
+        <p class="hero-subtitle">
+          专业品质 · 值得信赖 · 众多成功案例见证<br>
+          园区 · 学校 · 企业 · 政府
         </p>
+      </div>
+
+      <!-- 案例统计 -->
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-item">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">成功案例</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">4</div>
+          <div class="stat-label">案例类别</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">客户满意</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">8年</div>
+          <div class="stat-label">行业经验</div>
+        </div>
       </div>
     </div>
   </section>
@@ -52,7 +104,7 @@
   <section class="section" id="cases">
     <div class="container">
       <!-- 筛选标签 -->
-      <div class="text-center mb-lg scroll-animate">
+      <div class="text-center mb-lg" data-aos="fade-up">
         <button class="btn btn-secondary filter-btn active" data-filter="all" style="margin: 0.5rem;">全部案例</button>
         <button class="btn btn-secondary filter-btn" data-filter="park" style="margin: 0.5rem;">园区</button>
         <button class="btn btn-secondary filter-btn" data-filter="school" style="margin: 0.5rem;">学校</button>
@@ -63,7 +115,7 @@
       <!-- 案例网格 -->
       <div class="grid grid-3">
         <!-- 园区案例 -->
-        <div class="card scroll-animate filter-item park" data-lightbox>
+        <div class="card card-enhanced filter-item park" data-aos="fade-up" data-lightbox>
           <img src="images/placeholder.jpg" alt="案例图片" class="card-image">
           <span class="tag">园区</span>
           <span class="tag">2023</span>
@@ -76,7 +128,7 @@
           </div>
         </div>
 
-        <div class="card scroll-animate delay-100 filter-item park">
+        <div class="card card-enhanced filter-item park" data-aos="fade-up" data-aos-delay="100">
           <img src="images/placeholder.jpg" alt="案例图片" class="card-image">
           <span class="tag">园区</span>
           <span class="tag">2023</span>
@@ -90,7 +142,7 @@
         </div>
 
         <!-- 学校案例 -->
-        <div class="card scroll-animate filter-item school">
+        <div class="card card-enhanced filter-item school" data-aos="fade-up">
           <img src="images/placeholder.jpg" alt="案例图片" class="card-image">
           <span class="tag">学校</span>
           <span class="tag">2023</span>
@@ -103,7 +155,7 @@
           </div>
         </div>
 
-        <div class="card scroll-animate delay-100 filter-item school">
+        <div class="card card-enhanced filter-item school" data-aos="fade-up" data-aos-delay="100">
           <img src="images/placeholder.jpg" alt="案例图片" class="card-image">
           <span class="tag">学校</span>
           <span class="tag">2022</span>
@@ -117,7 +169,7 @@
         </div>
 
         <!-- 企业案例 -->
-        <div class="card scroll-animate filter-item enterprise">
+        <div class="card card-enhanced filter-item enterprise" data-aos="fade-up">
           <img src="images/placeholder.jpg" alt="案例图片" class="card-image">
           <span class="tag">企业</span>
           <span class="tag">2023</span>
@@ -130,7 +182,7 @@
           </div>
         </div>
 
-        <div class="card scroll-animate delay-100 filter-item enterprise">
+        <div class="card card-enhanced filter-item enterprise" data-aos="fade-up" data-aos-delay="100">
           <img src="images/placeholder.jpg" alt="案例图片" class="card-image">
           <span class="tag">企业</span>
           <span class="tag">2022</span>
@@ -144,7 +196,7 @@
         </div>
 
         <!-- 政府案例 -->
-        <div class="card scroll-animate filter-item government">
+        <div class="card card-enhanced filter-item government" data-aos="fade-up">
           <img src="images/placeholder.jpg" alt="案例图片" class="card-image">
           <span class="tag">政府</span>
           <span class="tag">2023</span>
@@ -157,7 +209,7 @@
           </div>
         </div>
 
-        <div class="card scroll-animate delay-100 filter-item government">
+        <div class="card card-enhanced filter-item government" data-aos="fade-up" data-aos-delay="100">
           <img src="images/placeholder.jpg" alt="案例图片" class="card-image">
           <span class="tag">政府</span>
           <span class="tag">2022</span>
@@ -170,7 +222,7 @@
           </div>
         </div>
 
-        <div class="card scroll-animate filter-item enterprise">
+        <div class="card card-enhanced filter-item enterprise" data-aos="fade-up" data-aos-delay="200">
           <img src="images/placeholder.jpg" alt="案例图片" class="card-image">
           <span class="tag">企业</span>
           <span class="tag">2022</span>
@@ -194,12 +246,12 @@
   <!-- 客户评价 -->
   <section class="section" style="background: var(--bg-light);">
     <div class="container">
-      <div class="section-title scroll-animate">
+      <div class="section-title" data-aos="fade-up">
         <h2>客户评价</h2>
       </div>
 
       <div class="grid grid-3">
-        <div class="card scroll-animate">
+        <div class="card card-enhanced" data-aos="fade-up">
           <p class="card-description" style="font-style: italic; margin-bottom: var(--spacing-sm);">
             "YXRC团队专业、负责，从方案设计到施工都非常满意。系统运行稳定，售后服务也很到位。"
           </p>
@@ -208,7 +260,7 @@
           </div>
         </div>
 
-        <div class="card scroll-animate delay-100">
+        <div class="card card-enhanced" data-aos="fade-up" data-aos-delay="100">
           <p class="card-description" style="font-style: italic; margin-bottom: var(--spacing-sm);">
             "校园安全是重中之重，YXRC提供的解决方案很好地满足了我们的需求，师生安全得到保障。"
           </p>
@@ -217,7 +269,7 @@
           </div>
         </div>
 
-        <div class="card scroll-animate delay-200">
+        <div class="card card-enhanced" data-aos="fade-up" data-aos-delay="200">
           <p class="card-description" style="font-style: italic; margin-bottom: var(--spacing-sm);">
             "政府项目要求严格，YXRC团队的专业性和执行力都很强，项目按时高质量完成。"
           </p>
@@ -279,6 +331,7 @@
 
   <script src="js/main.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/interactions-enhanced.js"></script>
   <script>
     // 案例筛选功能
     document.addEventListener('DOMContentLoaded', function() {

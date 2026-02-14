@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="北京悦享融创提供标准化的安防工程服务流程，从需求咨询、现场勘测、方案设计到安装调试、验收培训、售后服务，全程专业透明。">
+  <meta name="keywords" content="安防工程流程,服务流程,安装流程,售后服务,安防项目实施,工程服务标准">
+  <meta name="author" content="北京悦享融创科技有限公司">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="服务流程 - 北京悦享融创科技有限公司">
+  <meta property="og:description" content="标准化安防工程服务流程，全程专业透明。">
+  <meta property="og:type" content="website">
+
+  <title>服务流程 - 北京悦享融创科技有限公司</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+
+  <!-- 样式文件 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/animations-enhanced.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    /* 服务流程页面专用样式 */
+
+    /* 页面头部 */
+    .page-header {
+      padding: 180px 0 100px;
+      background: var(--gradient-hero);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(0, 82, 212, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(67, 100, 247, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .page-header-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .page-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: var(--spacing-md);
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-tertiary);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* 流程时间轴 */
+    .process-timeline {
+      padding: var(--spacing-3xl) 0;
+      background: var(--bg-dark);
+    }
+
+    .timeline-container {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* 时间轴线 */
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--gradient-primary);
+      transform: translateX(-50%);
+    }
+
+    /* 流程步骤 */
+    .process-step {
+      position: relative;
+      margin-bottom: var(--spacing-3xl);
+      display: flex;
+      align-items: center;
+    }
+
+    .process-step:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
+
+    /* 步骤编号 */
+    .step-number {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 80px;
+      background: var(--gradient-primary);
+      border-radius: 50%;
+      border: 6px solid var(--bg-dark);
+      box-shadow: var(--shadow-primary-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      z-index: 10;
+    }
+
+    /* 步骤内容 */
+    .step-content {
+      width: 45%;
+      background: var(--bg-card);
+      padding: var(--spacing-xl);
+      border-radius: var(--radius-lg);
+      border: 2px solid rgba(0, 82, 212, 0.2);
+      transition: all var(--transition-normal);
+    }
+
+    .step-content:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary-color);
+      box-shadow: var(--shadow-primary-lg);
+    }
+
+    .step-icon {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto var(--spacing-md);
+      background: var(--gradient-primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+    }
+
+    .step-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-sm);
+      color: var(--text-primary);
+      text-align: center;
+    }
+
+    .step-description {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .step-meta {
+      display: flex;
+      justify-content: space-between;
+      padding-top: var(--spacing-sm);
+      border-top: 1px solid rgba(0, 82, 212, 0.2);
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .step-meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
+
+    /* 服务承诺 */
+    .guarantees {
+      padding: var(--spacing-3xl) 0;
+      background: var(--bg-darker);
+    }
+
+    .guarantee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-lg);
+    }
+
+    .guarantee-card {
+      background: var(--bg-card);
+      padding: var(--spacing-xl);
+      border-radius: var(--radius-lg);
+      border: 2px solid rgba(0, 82, 212, 0.2);
+      text-align: center;
+      transition: all var(--transition-normal);
+    }
+
+    .guarantee-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--accent-color);
+      box-shadow: var(--shadow-accent);
+    }
+
+    .guarantee-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto var(--spacing-md);
+      background: var(--gradient-accent);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .guarantee-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: var(--spacing-sm);
+      color: var(--text-primary);
+    }
+
+    .guarantee-text {
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* CTA区域 */
+    .cta-section {
+      padding: var(--spacing-3xl) 0;
+      background: var(--bg-dark);
+      text-align: center;
+    }
+
+    .cta-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: var(--spacing-md);
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .cta-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-tertiary);
+      margin-bottom: var(--spacing-xl);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: var(--spacing-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* 响应式 */
+    @media (max-width: 768px) {
+      .timeline-container::before {
+        left: 20px;
+      }
+
+      .process-step,
+      .process-step:nth-child(odd) {
+        flex-direction: row;
+        padding-left: 80px;
+      }
+
+      .step-content {
+        width: 100%;
+      }
+
+      .step-number {
+        left: 20px;
+        transform: none;
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <span class="logo-text">悦享融创</span>
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li class="nav-item dropdown">
+          <a href="products.html" class="nav-link dropdown-toggle">产品中心</a>
+          <div class="dropdown-menu">
+            <a href="products.html#camera" class="dropdown-item">监控摄像头</a>
+            <a href="products.html#nvr" class="dropdown-item">录像设备</a>
+            <a href="products.html#access" class="dropdown-item">门禁系统</a>
+            <a href="products.html#alarm" class="dropdown-item">报警设备</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="solutions.html" class="nav-link dropdown-toggle">解决方案</a>
+          <div class="dropdown-menu">
+            <a href="solutions.html#park" class="dropdown-item">产业园区</a>
+            <a href="solutions.html#school" class="dropdown-item">学校教育</a>
+            <a href="solutions.html#enterprise" class="dropdown-item">企业办公</a>
+            <a href="solutions.html#government" class="dropdown-item">政府机构</a>
+          </div>
+        </li>
+        <li><a href="cases.html" class="nav-link">工程案例</a></li>
+        <li class="nav-item dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle">关于我们</a>
+          <div class="dropdown-menu">
+            <a href="about.html#intro" class="dropdown-item">公司介绍</a>
+            <a href="about.html#timeline" class="dropdown-item">发展历程</a>
+            <a href="about.html#qualifications" class="dropdown-item">企业资质</a>
+            <a href="about.html#team" class="dropdown-item">团队介绍</a>
+            <a href="process.html" class="dropdown-item">服务流程</a>
+          </div>
+        </li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="nav-link">联系我们</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 页面头部 -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header-content" data-aos="fade-up">
+        <h1 class="page-title">服务流程</h1>
+        <p class="page-subtitle">
+          标准化服务流程，全程专业透明<br>
+          从需求咨询到售后保障，8个步骤专业实施
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 流程时间轴 -->
+  <section class="process-timeline">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>服务流程</h2>
+        <p>8个步骤，专业实施</p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- 步骤1 -->
+        <div class="process-step" data-aos="fade-up">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <div class="step-icon">💬</div>
+            <h3 class="step-title">需求咨询</h3>
+            <p class="step-description">
+              通过电话、在线表单或到店咨询，了解您的安防需求。我们的专业顾问会详细询问使用场景、预算范围、特殊要求等信息。
+            </p>
+            <div class="step-meta">
+              <div class="step-meta-item">
+                <span>⏱</span>
+                <span>即时响应</span>
+              </div>
+              <div class="step-meta-item">
+                <span>👤</span>
+                <span>免费服务</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 步骤2 -->
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <div class="step-icon">📍</div>
+            <h3 class="step-title">现场勘测</h3>
+            <p class="step-description">
+              我们的专业工程师会上门进行现场勘测，详细了解环境特点、布线条件、安装点位等实际情况，为方案设计提供准确数据。
+            </p>
+            <div class="step-meta">
+              <div class="step-meta-item">
+                <span>⏱</span>
+                <span>1-2小时</span>
+              </div>
+              <div class="step-meta-item">
+                <span>👤</span>
+                <span>北京市内免费</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 步骤3 -->
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <div class="step-icon">📋</div>
+            <h3 class="step-title">方案设计</h3>
+            <p class="step-description">
+              根据勘测结果和您的需求，我们的工程师会设计详细的解决方案，包括设备选型、点位布置、系统架构、施工方案等完整内容。
+            </p>
+            <div class="step-meta">
+              <div class="step-meta-item">
+                <span>⏱</span>
+                <span>3-5个工作日</span>
+              </div>
+              <div class="step-meta-item">
+                <span>👤</span>
+                <span>免费提供</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 步骤4 -->
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <div class="step-icon">💰</div>
+            <h3 class="step-title">报价确认</h3>
+            <p class="step-description">
+              我们会提供详细的报价清单，包括设备型号、数量、单价、总价等所有明细。价格透明，无任何隐藏费用，确认后即可签约。
+            </p>
+            <div class="step-meta">
+              <div class="step-meta-item">
+                <span>⏱</span>
+                <span>1个工作日</span>
+              </div>
+              <div class="step-meta-item">
+                <span>👤</span>
+                <span>透明清晰</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 步骤5 -->
+        <div class="process-step" data-aos="fade-up">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <div class="step-icon">📝</div>
+            <h3 class="step-title">合同签订</h3>
+            <p class="step-description">
+              确认报价后，签订正式工程合同，明确项目内容、工期要求、付款方式、售后服务等所有条款，保障双方权益。
+            </p>
+            <div class="step-meta">
+              <div class="step-meta-item">
+                <span>⏱</span>
+                <span>即时办理</span>
+              </div>
+              <div class="step-meta-item">
+                <span>👤</span>
+                <span>正规合同</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 步骤6 -->
+        <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+          <div class="step-number">6</div>
+          <div class="step-content">
+            <div class="step-icon">🛒</div>
+            <h3 class="step-title">设备采购</h3>
+            <p class="step-description">
+              根据合同要求，我们采购所有设备。所有设备均为正品行货，来自海康威视、大华等一线品牌，确保质量和性能。
+            </p>
+            <div class="step-meta">
+              <div class="step-meta-item">
+                <span>⏱</span>
+                <span>3-7个工作日</span>
+              </div>
+              <div class="step-meta-item">
+                <span>👤</span>
+                <span>正品保证</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 步骤7 -->
+        <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+          <div class="step-number">7</div>
+          <div class="step-content">
+            <div class="step-icon">🔧</div>
+            <h3 class="step-title">安装调试</h3>
+            <p class="step-description">
+              我们的专业施工团队上门安装，严格按照标准施工，完成设备安装、线路布设、系统调试等工作，确保系统稳定运行。
+            </p>
+            <div class="step-meta">
+              <div class="step-meta-item">
+                <span>⏱</span>
+                <span>1-7个工作日</span>
+              </div>
+              <div class="step-meta-item">
+                <span>👤</span>
+                <span>专业施工</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 步骤8 -->
+        <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+          <div class="step-number">8</div>
+          <div class="step-content">
+            <div class="step-icon">✅</div>
+            <h3 class="step-title">验收培训</h3>
+            <p class="step-description">
+              项目完成后，我们进行系统验收，确保所有功能正常。同时为您或您的团队提供完整的使用培训，包括系统操作、常见问题处理等。
+            </p>
+            <div class="step-meta">
+              <div class="step-meta-item">
+                <span>⏱</span>
+                <span>1-3小时</span>
+              </div>
+              <div class="step-meta-item">
+                <span>👤</span>
+                <span>免费培训</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 服务承诺 -->
+  <section class="guarantees">
+    <div class="container">
+      <div class="section-title" data-aos="fade-up">
+        <h2>服务承诺</h2>
+        <p>全程保障，安心托付</p>
+      </div>
+
+      <div class="guarantee-grid">
+        <div class="guarantee-card" data-aos="fade-up">
+          <div class="guarantee-icon">⏱</div>
+          <h3 class="guarantee-title">快速响应</h3>
+          <p class="guarantee-text">
+            24小时服务热线，2小时内响应，北京市内24小时上门服务
+          </p>
+        </div>
+
+        <div class="guarantee-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="guarantee-icon">✅</div>
+          <h3 class="guarantee-title">正品保证</h3>
+          <p class="guarantee-text">
+            所有设备均为正品行货，提供原厂质保，支持官方验证
+          </p>
+        </div>
+
+        <div class="guarantee-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="guarantee-icon">🔧</div>
+          <h3 class="guarantee-title">专业施工</h3>
+          <p class="guarantee-text">
+            专业工程师持证上岗，严格按照行业标准施工，确保工程质量
+          </p>
+        </div>
+
+        <div class="guarantee-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="guarantee-icon">💎</div>
+          <h3 class="guarantee-title">售后保障</h3>
+          <p class="guarantee-text">
+            质保期免费维修，终身技术支持，定期回访巡检服务
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA区域 -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-title" data-aos="fade-up">准备好开始了吗？</h2>
+      <p class="cta-subtitle" data-aos="fade-up" data-aos-delay="100">
+        立即联系我们，开启您的安防升级之旅
+      </p>
+      <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+        <a href="contact.html" class="btn btn-primary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          免费咨询
+        </a>
+        <a href="tel:13683314533" class="btn btn-secondary btn-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          电话咨询
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>悦享融创</h3>
+          <p>专业安防监控解决方案提供商</p>
+          <p style="font-size: 0.875rem; color: var(--text-muted);">
+            悦享科技之利，融创安全之本
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>快速链接</h3>
+          <ul>
+            <li><a href="products.html">产品中心</a></li>
+            <li><a href="solutions.html">解决方案</a></li>
+            <li><a href="cases.html">工程案例</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>联系方式</h3>
+          <ul>
+            <li>联系人：白经理</li>
+            <li>电话：13683314533</li>
+            <li>邮箱：contact@yxrc-tech.cn</li>
+            <li>地址：北京市石景山区双峪路35号<br>爱玛裕家居购物广场X区一层X006号</li>
+            <li>工作时间：周一至周五 09:00-18:00</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2016-2024 北京悦享融创科技有限公司. 保留所有权利.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript 文件 -->
+  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/interactions-enhanced.js"></script>
+</body>
+</html>

@@ -3,13 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="联系北京悦享融创科技有限公司 - 电话咨询、在线留言、地图导航">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="联系北京悦享融创科技有限公司 - 电话咨询、在线留言、地图导航。提供专业的安防监控解决方案咨询服务，24小时响应。">
+  <meta name="keywords" content="联系悦享融创,安防咨询,北京安防公司电话,安防监控报价,弱电工程咨询,门禁系统咨询">
+  <meta name="author" content="北京悦享融创科技有限公司">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="联系我们 - 北京悦享融创科技有限公司">
+  <meta property="og:description" content="联系北京悦享融创科技有限公司，获取专业安防监控解决方案咨询。电话：13683314533，邮箱：contact@yxrc-tech.cn">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.yxrc-tech.cn/contact.html">
+  <meta property="og:locale" content="zh_CN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="联系我们 - 北京悦享融创科技有限公司">
+  <meta name="twitter:description" content="联系北京悦享融创科技有限公司，获取专业安防监控解决方案咨询">
+
   <title>联系我们 - 北京悦享融创科技有限公司</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://webapi.amap.com">
+
+  <!-- 样式文件 -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/animations-enhanced.css">
   <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "联系我们 - 北京悦享融创科技有限公司",
+    "description": "联系北京悦享融创科技有限公司获取专业安防监控解决方案",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "北京悦享融创科技有限公司",
+      "telephone": "+86-13683314533",
+      "email": "contact@yxrc-tech.cn",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "双峪路35号爱玛裕家居购物广场X区一层X006号",
+        "addressLocality": "北京市",
+        "addressRegion": "石景山区",
+        "postalCode": "100040"
+      }
+    }
+  }
+  </script>
 
   <!-- 高德地图 API -->
   <script type="text/javascript">
@@ -32,6 +81,17 @@
         <li><a href="products.html" class="nav-link">产品中心</a></li>
         <li><a href="solutions.html" class="nav-link">解决方案</a></li>
         <li><a href="cases.html" class="nav-link">工程案例</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle">关于我们</a>
+          <div class="dropdown-menu">
+            <a href="about.html#intro" class="dropdown-item">公司介绍</a>
+            <a href="about.html#timeline" class="dropdown-item">发展历程</a>
+            <a href="about.html#qualifications" class="dropdown-item">企业资质</a>
+            <a href="about.html#team" class="dropdown-item">团队介绍</a>
+            <a href="process.html" class="dropdown-item">服务流程</a>
+          </div>
+        </li>
         <li><a href="contact.html" class="nav-link active">联系我们</a></li>
       </ul>
 
@@ -43,15 +103,42 @@
     </div>
   </nav>
 
-  <!-- 页面标题 -->
-  <section class="hero" style="min-height: 40vh; padding-top: 120px;">
+  <!-- Hero 区域 -->
+  <section class="hero" style="min-height: 50vh; padding-top: 120px;">
     <div class="particles"></div>
     <div class="container">
       <div class="hero-content text-center">
-        <h1 class="hero-title animate-fadeInUp">联系我们</h1>
-        <p class="hero-subtitle animate-fadeInUp delay-200">
-          期待与您的合作
+        <div class="hero-badge" data-aos="fade-down">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+          </svg>
+          <span>专业服务 · 快速响应</span>
+        </div>
+
+        <h1 class="hero-title" data-aos="fade-up">联系我们</h1>
+        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+          期待与您的合作<br>
+          24小时服务响应，专业团队为您服务
         </p>
+
+        <div class="hero-stats" data-aos="fade-up" data-aos-delay="400" style="margin-top: var(--spacing-xl);">
+          <div class="stat-item">
+            <div class="stat-number counter" data-target="24">0</div>
+            <div class="stat-label">小时服务</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number counter" data-target="30">0</div>
+            <div class="stat-label">分钟响应</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number counter" data-target="500">0</div>
+            <div class="stat-label">服务客户</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number counter" data-target="98">0</div>
+            <div class="stat-label">%满意度</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -60,29 +147,45 @@
   <section class="section">
     <div class="container">
       <div class="grid grid-4">
-        <div class="card text-center scroll-animate">
-          <div class="feature-icon icon-phone"><span>📞</span></div>
+        <div class="card card-enhanced text-center scroll-animate" data-aos="fade-up">
+          <div class="feature-icon icon-phone">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+          </div>
           <h3 class="card-title">咨询电话</h3>
           <p class="card-description">13683314533</p>
           <p style="color: var(--text-muted); font-size: 0.875rem;">周一至周五 9:00-18:00</p>
         </div>
 
-        <div class="card text-center scroll-animate delay-100">
-          <div class="feature-icon icon-email"><span>📧</span></div>
+        <div class="card card-enhanced text-center scroll-animate delay-100" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon icon-email">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+          </div>
           <h3 class="card-title">电子邮箱</h3>
           <p class="card-description">contact@yxrc-tech.cn</p>
           <p style="color: var(--text-muted); font-size: 0.875rem;">24小时内回复</p>
         </div>
 
-        <div class="card text-center scroll-animate delay-200">
-          <div class="feature-icon icon-location"><span>📍</span></div>
+        <div class="card card-enhanced text-center scroll-animate delay-200" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon icon-location">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
           <h3 class="card-title">公司地址</h3>
           <p class="card-description">北京市石景山区双峪路35号 爱玛裕家居购物广场X区一层X006号</p>
           <p style="color: var(--text-muted); font-size: 0.875rem;">欢迎来访</p>
         </div>
 
-        <div class="card text-center scroll-animate delay-300">
-          <div class="feature-icon icon-chat"><span>💬</span></div>
+        <div class="card card-enhanced text-center scroll-animate delay-300" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon icon-chat">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+            </svg>
+          </div>
           <h3 class="card-title">在线客服</h3>
           <p class="card-description">点击咨询</p>
           <p style="color: var(--text-muted); font-size: 0.875rem;">实时在线</p>
@@ -96,31 +199,30 @@
     <div class="container">
       <div class="grid grid-2" style="gap: var(--spacing-lg);">
         <!-- 联系表单 -->
-        <div class="card scroll-animate">
+        <div class="card card-enhanced scroll-animate" data-aos="fade-up">
           <h2 style="margin-bottom: var(--spacing-md);">在线留言</h2>
           <form id="contactForm">
-            <div class="form-group">
-              <label class="form-label" for="name">姓名 *</label>
-              <input type="text" id="name" name="name" class="form-input" required placeholder="请输入您的姓名">
+            <div class="form-floating">
+              <input type="text" id="name" name="name" class="form-input" required placeholder=" ">
+              <label for="name">姓名 *</label>
             </div>
 
-            <div class="form-group">
-              <label class="form-label" for="phone">手机号 *</label>
-              <input type="tel" id="phone" name="phone" class="form-input" required placeholder="请输入您的手机号">
+            <div class="form-floating">
+              <input type="tel" id="phone" name="phone" class="form-input" required placeholder=" ">
+              <label for="phone">手机号 *</label>
             </div>
 
-            <div class="form-group">
-              <label class="form-label" for="email">邮箱</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="请输入您的邮箱">
+            <div class="form-floating">
+              <input type="email" id="email" name="email" class="form-input" placeholder=" ">
+              <label for="email">邮箱</label>
             </div>
 
-            <div class="form-group">
-              <label class="form-label" for="company">公司名称</label>
-              <input type="text" id="company" name="company" class="form-input" placeholder="请输入您的公司名称">
+            <div class="form-floating">
+              <input type="text" id="company" name="company" class="form-input" placeholder=" ">
+              <label for="company">公司名称</label>
             </div>
 
-            <div class="form-group">
-              <label class="form-label" for="service">需求类型</label>
+            <div class="form-floating">
               <select id="service" name="service" class="form-input">
                 <option value="">请选择需求类型</option>
                 <option value="consultation">方案咨询</option>
@@ -129,26 +231,32 @@
                 <option value="maintenance">售后维护</option>
                 <option value="other">其他</option>
               </select>
+              <label for="service">需求类型</label>
             </div>
 
-            <div class="form-group">
-              <label class="form-label" for="message">需求描述 *</label>
-              <textarea id="message" name="message" class="form-textarea" required placeholder="请详细描述您的需求"></textarea>
+            <div class="form-floating">
+              <textarea id="message" name="message" class="form-textarea" required placeholder=" " style="min-height: 120px;"></textarea>
+              <label for="message">需求描述 *</label>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">提交留言</button>
+            <button type="submit" class="btn btn-accent" style="width: 100%;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px; vertical-align: middle;">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              </svg>
+              提交留言
+            </button>
           </form>
         </div>
 
         <!-- 地图和公司信息 -->
-        <div class="scroll-animate delay-100">
-          <div class="card mb-md">
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div class="card card-enhanced mb-md">
             <h3 style="margin-bottom: var(--spacing-md);">公司位置</h3>
             <!-- 高德地图容器 -->
             <div id="container" style="width: 100%; height: 300px; border-radius: var(--radius-md);"></div>
           </div>
 
-          <div class="card">
+          <div class="card card-enhanced">
             <h3 style="margin-bottom: var(--spacing-md);">公司信息</h3>
             <div style="color: var(--text-secondary); line-height: 2;">
               <p><strong style="color: var(--text-primary);">公司名称：</strong>北京悦享融创科技有限公司</p>
@@ -166,33 +274,33 @@
   <!-- 常见问题 -->
   <section class="section">
     <div class="container">
-      <div class="section-title scroll-animate">
+      <div class="section-title scroll-animate" data-aos="fade-up">
         <h2>常见问题</h2>
       </div>
 
       <div class="grid grid-2">
-        <div class="card scroll-animate">
+        <div class="card card-enhanced scroll-animate" data-aos="fade-up">
           <h3 style="color: var(--primary-color);">Q: 如何获取报价？</h3>
           <p class="card-description">
             A: 您可以通过在线留言、电话咨询或邮件联系我们，提供您的需求信息，我们会安排专业工程师为您免费设计方案并提供报价。
           </p>
         </div>
 
-        <div class="card scroll-animate delay-100">
+        <div class="card card-enhanced scroll-animate delay-100" data-aos="fade-up" data-aos-delay="100">
           <h3 style="color: var(--primary-color);">Q: 项目实施周期多久？</h3>
           <p class="card-description">
             A: 项目周期根据项目规模而定，一般为1-4周。小型项目1周内完成，中型项目2-3周，大型项目3-4周。
           </p>
         </div>
 
-        <div class="card scroll-animate delay-200">
+        <div class="card card-enhanced scroll-animate delay-200" data-aos="fade-up" data-aos-delay="200">
           <h3 style="color: var(--primary-color);">Q: 提供售后服务吗？</h3>
           <p class="card-description">
             A: 是的，我们提供7×24小时技术支持，设备享有1-3年质保期，终身维护服务。
           </p>
         </div>
 
-        <div class="card scroll-animate delay-300">
+        <div class="card card-enhanced scroll-animate delay-300" data-aos="fade-up" data-aos-delay="300">
           <h3 style="color: var(--primary-color);">Q: 可以先看方案再决定吗？</h3>
           <p class="card-description">
             A: 可以的，我们提供免费的现场勘测和方案设计服务，您可以先了解方案和报价后再做决定。
@@ -204,14 +312,24 @@
 
   <!-- CTA -->
   <section class="section" style="background: var(--gradient-bg);">
-    <div class="container text-center">
+    <div class="container text-center" data-aos="fade-up">
       <h2 style="margin-bottom: var(--spacing-md);">准备开始您的项目了吗？</h2>
       <p style="color: var(--text-secondary); margin-bottom: var(--spacing-lg); max-width: 600px; margin-left: auto; margin-right: auto;">
         联系我们的专业团队，让我们为您提供最适合的安防解决方案
       </p>
       <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
-        <a href="tel:13683314533" class="btn btn-accent">立即咨询：13683314533</a>
-        <a href="index.html#quick-contact" class="btn btn-secondary">在线留言</a>
+        <a href="tel:13683314533" class="btn btn-accent">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px; vertical-align: middle;">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          立即咨询：13683314533
+        </a>
+        <a href="#contact" class="btn btn-secondary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px; vertical-align: middle;">
+            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          在线留言
+        </a>
       </div>
     </div>
   </section>
@@ -265,8 +383,10 @@
     </div>
   </footer>
 
+  <!-- JavaScript 文件 -->
   <script src="js/main.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/interactions-enhanced.js"></script>
 
   <!-- 高德地图初始化 -->
   <script>

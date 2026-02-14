@@ -3,13 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="北京悦享融创科技有限公司专注于北京及周边地区的安防监控、弱电智能化工程。提供监控安装、综合布线、门禁系统及智能化系统集成一站式服务，是您值得信赖的安防专家。">
-  <meta name="keywords" content="北京安防监控,石景山弱电工程,智能化系统集成,视频监控系统安装,门禁考勤系统,园区安防方案,北京悦享融创,北京安防公司">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="北京悦享融创提供专业安防监控设备，包括高清摄像头、NVR录像机、门禁系统、报警设备等。一线品牌，品质保障，价格优惠。">
+  <meta name="keywords" content="监控摄像头,NVR录像机,门禁系统,报警设备,安防产品,海康威视,大华,北京安防设备">
+  <meta name="author" content="北京悦享融创科技有限公司">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="产品中心 - 北京悦享融创科技有限公司">
+  <meta property="og:description" content="专业安防监控设备，包括高清摄像头、NVR录像机、门禁系统、报警设备等。一线品牌，品质保障。">
+  <meta property="og:type" content="website">
+
   <title>产品中心 - 北京悦享融创科技有限公司</title>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🛡️%3C/text%3E%3C/svg%3E">
+
+  <!-- 样式文件 -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/icons.css">
   <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/animations-enhanced.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -25,6 +40,17 @@
         <li><a href="products.html" class="nav-link active">产品中心</a></li>
         <li><a href="solutions.html" class="nav-link">解决方案</a></li>
         <li><a href="cases.html" class="nav-link">工程案例</a></li>
+        <li><a href="faq.html" class="nav-link">FAQ</a></li>
+        <li class="nav-item dropdown">
+          <a href="about.html" class="nav-link dropdown-toggle">关于我们</a>
+          <div class="dropdown-menu">
+            <a href="about.html#intro" class="dropdown-item">公司介绍</a>
+            <a href="about.html#timeline" class="dropdown-item">发展历程</a>
+            <a href="about.html#qualifications" class="dropdown-item">企业资质</a>
+            <a href="about.html#team" class="dropdown-item">团队介绍</a>
+            <a href="process.html" class="dropdown-item">服务流程</a>
+          </div>
+        </li>
         <li><a href="contact.html" class="nav-link">联系我们</a></li>
       </ul>
 
@@ -37,14 +63,35 @@
   </nav>
 
   <!-- 页面标题 -->
-  <section class="hero" style="min-height: 40vh; padding-top: 120px;">
+  <section class="hero" style="min-height: 50vh; padding-top: 120px;">
     <div class="particles"></div>
     <div class="container">
-      <div class="hero-content text-center">
-        <h1 class="hero-title animate-fadeInUp">产品中心</h1>
-        <p class="hero-subtitle animate-fadeInUp delay-200">
-          品质安防设备 · 专业解决方案
+      <div class="hero-content text-center" data-aos="fade-up">
+        <h1 class="hero-title">产品中心</h1>
+        <p class="hero-subtitle">
+          专业安防监控设备，一线品牌品质保障<br>
+          高清摄像头 · NVR录像机 · 门禁系统 · 报警设备
         </p>
+      </div>
+
+      <!-- 产品统计 -->
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-item">
+          <div class="stat-number">12+</div>
+          <div class="stat-label">产品类别</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">正品保证</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3年</div>
+          <div class="stat-label">质保服务</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24h</div>
+          <div class="stat-label">技术支持</div>
+        </div>
       </div>
     </div>
   </section>
@@ -53,7 +100,7 @@
   <section class="section" id="products">
     <div class="container">
       <!-- 筛选标签 -->
-      <div class="text-center mb-lg scroll-animate">
+      <div class="text-center mb-lg" data-aos="fade-up">
         <button class="btn btn-secondary filter-btn active" data-filter="all" style="margin: 0.5rem;">全部产品</button>
         <button class="btn btn-secondary filter-btn" data-filter="camera" style="margin: 0.5rem;">监控摄像头</button>
         <button class="btn btn-secondary filter-btn" data-filter="nvr" style="margin: 0.5rem;">录像机</button>
@@ -64,7 +111,7 @@
       <!-- 产品列表 -->
       <div class="grid grid-3">
         <!-- 监控摄像头类别 -->
-        <div class="card scroll-animate filter-item camera">
+        <div class="card card-enhanced filter-item camera" data-aos="fade-up">
           <img src="images/placeholder.jpg" alt="高清网络摄像头" class="card-image">
           <span class="tag">监控摄像头</span>
           <h3 class="card-title">高清网络摄像头</h3>
@@ -74,10 +121,15 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥299 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
-        <div class="card scroll-animate delay-100 filter-item camera">
+        <div class="card card-enhanced filter-item camera" data-aos="fade-up" data-aos-delay="100">
           <img src="images/placeholder.jpg" alt="球机摄像头" class="card-image">
           <span class="tag">监控摄像头</span>
           <h3 class="card-title">智能球机摄像头</h3>
@@ -87,10 +139,15 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥1,299 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
-        <div class="card scroll-animate delay-200 filter-item camera">
+        <div class="card card-enhanced filter-item camera" data-aos="fade-up" data-aos-delay="200">
           <img src="images/placeholder.jpg" alt="全景摄像头" class="card-image">
           <span class="tag">监控摄像头</span>
           <h3 class="card-title">全景鱼眼摄像头</h3>
@@ -100,11 +157,16 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥899 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
         <!-- 录像机类别 -->
-        <div class="card scroll-animate filter-item nvr">
+        <div class="card card-enhanced filter-item nvr" data-aos="fade-up" data-aos-delay="300">
           <img src="images/placeholder.jpg" alt="NVR录像机" class="card-image">
           <span class="tag">录像机</span>
           <h3 class="card-title">网络硬盘录像机</h3>
@@ -114,10 +176,15 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥699 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
-        <div class="card scroll-animate delay-100 filter-item nvr">
+        <div class="card card-enhanced filter-item nvr" data-aos="fade-up" data-aos-delay="100">
           <img src="images/placeholder.jpg" alt="16路NVR" class="card-image">
           <span class="tag">录像机</span>
           <h3 class="card-title">16路网络录像机</h3>
@@ -127,10 +194,15 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥1,499 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
-        <div class="card scroll-animate delay-200 filter-item nvr">
+        <div class="card card-enhanced filter-item nvr" data-aos="fade-up" data-aos-delay="200">
           <img src="images/placeholder.jpg" alt="32路NVR" class="card-image">
           <span class="tag">录像机</span>
           <h3 class="card-title">32路企业级录像机</h3>
@@ -140,11 +212,16 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥3,999 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
         <!-- 门禁系统类别 -->
-        <div class="card scroll-animate filter-item access">
+        <div class="card card-enhanced filter-item access" data-aos="fade-up">
           <img src="images/placeholder.jpg" alt="人脸识别门禁" class="card-image">
           <span class="tag">门禁系统</span>
           <h3 class="card-title">人脸识别门禁机</h3>
@@ -154,10 +231,15 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥1,999 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
-        <div class="card scroll-animate delay-100 filter-item access">
+        <div class="card card-enhanced filter-item access" data-aos="fade-up" data-aos-delay="100">
           <img src="images/placeholder.jpg" alt="指纹门禁" class="card-image">
           <span class="tag">门禁系统</span>
           <h3 class="card-title">指纹门禁系统</h3>
@@ -167,10 +249,15 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥799 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
-        <div class="card scroll-animate delay-200 filter-item access">
+        <div class="card card-enhanced filter-item access" data-aos="fade-up" data-aos-delay="200">
           <img src="images/placeholder.jpg" alt="通道闸机" class="card-image">
           <span class="tag">门禁系统</span>
           <h3 class="card-title">智能通道闸机</h3>
@@ -180,11 +267,16 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥8,999 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
         <!-- 报警设备类别 -->
-        <div class="card scroll-animate filter-item alarm">
+        <div class="card card-enhanced filter-item alarm" data-aos="fade-up">
           <img src="images/placeholder.jpg" alt="红外对射" class="card-image">
           <span class="tag">报警设备</span>
           <h3 class="card-title">红外对射探测器</h3>
@@ -194,10 +286,15 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥299 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
-        <div class="card scroll-animate delay-100 filter-item alarm">
+        <div class="card card-enhanced filter-item alarm" data-aos="fade-up" data-aos-delay="100">
           <img src="images/placeholder.jpg" alt="声光报警器" class="card-image">
           <span class="tag">报警设备</span>
           <h3 class="card-title">声光报警器</h3>
@@ -207,10 +304,15 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥149 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
 
-        <div class="card scroll-animate delay-200 filter-item alarm">
+        <div class="card card-enhanced filter-item alarm" data-aos="fade-up" data-aos-delay="200">
           <img src="images/placeholder.jpg" alt="紧急报警按钮" class="card-image">
           <span class="tag">报警设备</span>
           <h3 class="card-title">紧急报警按钮</h3>
@@ -220,7 +322,12 @@
           <div class="mt-sm" style="color: var(--primary-color); font-weight: 600;">
             ¥99 起
           </div>
-          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">在线询价</a>
+          <a href="contact.html" class="btn btn-accent" style="margin-top: var(--spacing-sm); width: 100%;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            在线询价
+          </a>
         </div>
       </div>
     </div>
@@ -229,30 +336,30 @@
   <!-- 服务承诺 -->
   <section class="section" style="background: var(--bg-light);">
     <div class="container">
-      <div class="section-title scroll-animate">
+      <div class="section-title" data-aos="fade-up">
         <h2>我们的服务承诺</h2>
       </div>
 
       <div class="grid grid-4">
-        <div class="card text-center scroll-animate">
+        <div class="card card-enhanced text-center" data-aos="fade-up">
           <div class="feature-icon icon-certified"><span>📦</span></div>
           <h3 class="card-title">正品保证</h3>
           <p class="card-description">所有产品均为正品行货，提供原厂质保</p>
         </div>
 
-        <div class="card text-center scroll-animate delay-100">
+        <div class="card card-enhanced text-center" data-aos="fade-up" data-aos-delay="100">
           <div class="feature-icon icon-delivery"><span>🚚</span></div>
           <h3 class="card-title">快速配送</h3>
           <p class="card-description">全国配送，部分地区支持当日达</p>
         </div>
 
-        <div class="card text-center scroll-animate delay-200">
+        <div class="card card-enhanced text-center" data-aos="fade-up" data-aos-delay="200">
           <div class="feature-icon icon-install"><span>🔧</span></div>
           <h3 class="card-title">专业安装</h3>
           <p class="card-description">提供专业安装调试服务，确保设备正常运行</p>
         </div>
 
-        <div class="card text-center scroll-animate delay-300">
+        <div class="card card-enhanced text-center" data-aos="fade-up" data-aos-delay="300">
           <div class="feature-icon icon-support"><span>💬</span></div>
           <h3 class="card-title">技术支持</h3>
           <p class="card-description">7×24小时技术支持，快速响应您的需求</p>
