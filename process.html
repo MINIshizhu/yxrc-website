@@ -74,130 +74,123 @@
       margin: 0 auto;
     }
 
-    /* 流程时间轴 */
-    .process-timeline {
+    /* 横向流程布局 */
+    .process-section {
       padding: var(--spacing-3xl) 0;
       background: var(--bg-dark);
     }
 
-    .timeline-container {
-      position: relative;
-      max-width: 900px;
-      margin: 0 auto;
+    .process-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-lg);
+      max-width: 1400px;
+      margin: var(--spacing-2xl) auto 0;
     }
 
-    /* 时间轴线 */
-    .timeline-container::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      bottom: 0;
-      width: 4px;
-      background: var(--gradient-primary);
-      transform: translateX(-50%);
+    @media (max-width: 1024px) {
+      .process-steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
-    /* 流程步骤 */
+    @media (max-width: 768px) {
+      .process-steps-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 流程步骤卡片 */
     .process-step {
-      position: relative;
-      margin-bottom: var(--spacing-3xl);
-      display: flex;
-      align-items: center;
-    }
-
-    .process-step:nth-child(odd) {
-      flex-direction: row-reverse;
-    }
-
-    /* 步骤编号 */
-    .step-number {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 80px;
-      background: var(--gradient-primary);
-      border-radius: 50%;
-      border: 6px solid var(--bg-dark);
-      box-shadow: var(--shadow-primary-lg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--text-primary);
-      z-index: 10;
-    }
-
-    /* 步骤内容 */
-    .step-content {
-      width: 45%;
       background: var(--bg-card);
-      padding: var(--spacing-xl);
       border-radius: var(--radius-lg);
       border: 2px solid rgba(0, 82, 212, 0.2);
+      padding: var(--spacing-xl);
       transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
     }
 
-    .step-content:hover {
+    .process-step:hover {
       transform: translateY(-8px);
       border-color: var(--primary-color);
       box-shadow: var(--shadow-primary-lg);
     }
 
-    .step-icon {
-      width: 60px;
-      height: 60px;
-      margin: 0 auto var(--spacing-md);
+    /* 步骤编号 */
+    .step-number {
+      position: absolute;
+      top: var(--spacing-md);
+      right: var(--spacing-md);
+      width: 50px;
+      height: 50px;
       background: var(--gradient-primary);
-      border-radius: var(--radius-md);
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
       font-size: 1.5rem;
-    }
-
-    .step-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: var(--spacing-sm);
+      font-weight: 800;
       color: var(--text-primary);
-      text-align: center;
+      box-shadow: var(--shadow-primary);
     }
 
+    /* 步骤图标 */
+    .step-icon {
+      font-size: 3rem;
+      margin-bottom: var(--spacing-sm);
+      display: block;
+    }
+
+    /* 步骤标题 */
+    .step-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    /* 步骤描述 */
     .step-description {
+      font-size: 0.95rem;
       color: var(--text-secondary);
-      line-height: 1.8;
+      line-height: 1.6;
       margin-bottom: var(--spacing-md);
     }
 
+    /* 步骤元信息 */
     .step-meta {
       display: flex;
-      justify-content: space-between;
-      padding-top: var(--spacing-sm);
-      border-top: 1px solid rgba(0, 82, 212, 0.2);
+      flex-direction: column;
+      gap: var(--spacing-xs);
       font-size: 0.875rem;
-      color: var(--text-muted);
+      color: var(--text-tertiary);
     }
 
-    .step-meta-item {
+    .step-meta span {
       display: flex;
       align-items: center;
-      gap: var(--spacing-xs);
+      gap: 4px;
     }
 
     /* 服务承诺 */
-    .guarantees {
+    .guarantees-section {
       padding: var(--spacing-3xl) 0;
-      background: var(--bg-darker);
+      background: var(--bg-light);
     }
 
-    .guarantee-grid {
+    .guarantees-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: var(--spacing-lg);
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .guarantees-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     .guarantee-card {
@@ -216,16 +209,8 @@
     }
 
     .guarantee-icon {
-      width: 80px;
-      height: 80px;
-      margin: 0 auto var(--spacing-md);
-      background: var(--gradient-accent);
-      border-radius: var(--radius-lg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
       font-size: 2.5rem;
-      color: white;
+      margin-bottom: var(--spacing-md);
     }
 
     .guarantee-title {
@@ -272,31 +257,6 @@
       justify-content: center;
       flex-wrap: wrap;
     }
-
-    /* 响应式 */
-    @media (max-width: 768px) {
-      .timeline-container::before {
-        left: 20px;
-      }
-
-      .process-step,
-      .process-step:nth-child(odd) {
-        flex-direction: row;
-        padding-left: 80px;
-      }
-
-      .step-content {
-        width: 100%;
-      }
-
-      .step-number {
-        left: 20px;
-        transform: none;
-        width: 60px;
-        height: 60px;
-        font-size: 1.5rem;
-      }
-    }
   </style>
 </head>
 <body>
@@ -309,30 +269,13 @@
 
       <ul class="nav-menu">
         <li><a href="index.html" class="nav-link">首页</a></li>
-        <li class="nav-item dropdown">
-          <a href="products.html" class="nav-link dropdown-toggle">产品中心</a>
-          <div class="dropdown-menu">
-            <a href="products.html#camera" class="dropdown-item">监控摄像头</a>
-            <a href="products.html#nvr" class="dropdown-item">录像设备</a>
-            <a href="products.html#access" class="dropdown-item">门禁系统</a>
-            <a href="products.html#alarm" class="dropdown-item">报警设备</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="solutions.html" class="nav-link dropdown-toggle">解决方案</a>
-          <div class="dropdown-menu">
-            <a href="solutions.html#park" class="dropdown-item">产业园区</a>
-            <a href="solutions.html#school" class="dropdown-item">学校教育</a>
-            <a href="solutions.html#enterprise" class="dropdown-item">企业办公</a>
-            <a href="solutions.html#government" class="dropdown-item">政府机构</a>
-          </div>
-        </li>
+        <li><a href="products.html" class="nav-link">产品中心</a></li>
+        <li><a href="solutions.html" class="nav-link">解决方案</a></li>
         <li><a href="cases.html" class="nav-link">工程案例</a></li>
         <li class="nav-item dropdown">
           <a href="about.html" class="nav-link dropdown-toggle">关于我们</a>
           <div class="dropdown-menu">
             <a href="about.html#intro" class="dropdown-item">公司介绍</a>
-            <a href="about.html#timeline" class="dropdown-item">发展历程</a>
             <a href="about.html#qualifications" class="dropdown-item">企业资质</a>
             <a href="about.html#team" class="dropdown-item">团队介绍</a>
             <a href="process.html" class="dropdown-item">服务流程</a>
@@ -363,188 +306,124 @@
     </div>
   </section>
 
-  <!-- 流程时间轴 -->
-  <section class="process-timeline">
+  <!-- 横向流程步骤 -->
+  <section class="process-section">
     <div class="container">
       <div class="section-title" data-aos="fade-up">
         <h2>服务流程</h2>
         <p>8个步骤，专业实施</p>
       </div>
 
-      <div class="timeline-container">
+      <div class="process-steps-grid">
         <!-- 步骤1 -->
         <div class="process-step" data-aos="fade-up">
           <div class="step-number">1</div>
-          <div class="step-content">
-            <div class="step-icon">💬</div>
-            <h3 class="step-title">需求咨询</h3>
-            <p class="step-description">
-              通过电话、在线表单或到店咨询，了解您的安防需求。我们的专业顾问会详细询问使用场景、预算范围、特殊要求等信息。
-            </p>
-            <div class="step-meta">
-              <div class="step-meta-item">
-                <span>⏱</span>
-                <span>即时响应</span>
-              </div>
-              <div class="step-meta-item">
-                <span>👤</span>
-                <span>免费服务</span>
-              </div>
-            </div>
+          <div class="step-icon">💬</div>
+          <h3 class="step-title">需求咨询</h3>
+          <p class="step-description">
+            通过电话、在线表单或到店咨询，了解您的安防需求
+          </p>
+          <div class="step-meta">
+            <span>⏱ 即时响应</span>
+            <span>👤 免费服务</span>
           </div>
         </div>
 
         <!-- 步骤2 -->
         <div class="process-step" data-aos="fade-up" data-aos-delay="100">
           <div class="step-number">2</div>
-          <div class="step-content">
-            <div class="step-icon">📍</div>
-            <h3 class="step-title">现场勘测</h3>
-            <p class="step-description">
-              我们的专业工程师会上门进行现场勘测，详细了解环境特点、布线条件、安装点位等实际情况，为方案设计提供准确数据。
-            </p>
-            <div class="step-meta">
-              <div class="step-meta-item">
-                <span>⏱</span>
-                <span>1-2小时</span>
-              </div>
-              <div class="step-meta-item">
-                <span>👤</span>
-                <span>北京市内免费</span>
-              </div>
-            </div>
+          <div class="step-icon">📍</div>
+          <h3 class="step-title">现场勘测</h3>
+          <p class="step-description">
+            专业工程师上门进行现场勘测，详细了解环境特点、布线条件、安装点位等实际情况
+          </p>
+          <div class="step-meta">
+            <span>⏱ 1-2小时</span>
+            <span>👤 北京市内免费</span>
           </div>
         </div>
 
         <!-- 步骤3 -->
         <div class="process-step" data-aos="fade-up" data-aos-delay="200">
           <div class="step-number">3</div>
-          <div class="step-content">
-            <div class="step-icon">📋</div>
-            <h3 class="step-title">方案设计</h3>
-            <p class="step-description">
-              根据勘测结果和您的需求，我们的工程师会设计详细的解决方案，包括设备选型、点位布置、系统架构、施工方案等完整内容。
-            </p>
-            <div class="step-meta">
-              <div class="step-meta-item">
-                <span>⏱</span>
-                <span>3-5个工作日</span>
-              </div>
-              <div class="step-meta-item">
-                <span>👤</span>
-                <span>免费提供</span>
-              </div>
-            </div>
+          <div class="step-icon">📋</div>
+          <h3 class="step-title">方案设计</h3>
+          <p class="step-description">
+            根据勘测结果和您的需求，工程师会设计详细的解决方案，包括设备选型、点位布置等
+          </p>
+          <div class="step-meta">
+            <span>⏱ 3-5个工作日</span>
+            <span>👤 免费提供</span>
           </div>
         </div>
 
         <!-- 步骤4 -->
         <div class="process-step" data-aos="fade-up" data-aos-delay="300">
           <div class="step-number">4</div>
-          <div class="step-content">
-            <div class="step-icon">💰</div>
-            <h3 class="step-title">报价确认</h3>
-            <p class="step-description">
-              我们会提供详细的报价清单，包括设备型号、数量、单价、总价等所有明细。价格透明，无任何隐藏费用，确认后即可签约。
-            </p>
-            <div class="step-meta">
-              <div class="step-meta-item">
-                <span>⏱</span>
-                <span>1个工作日</span>
-              </div>
-              <div class="step-meta-item">
-                <span>👤</span>
-                <span>透明清晰</span>
-              </div>
-            </div>
+          <div class="step-icon">💰</div>
+          <h3 class="step-title">报价确认</h3>
+          <p class="step-description">
+            提供详细的报价清单，包括设备型号、数量、单价、总价等所有明细
+          </p>
+          <div class="step-meta">
+            <span>⏱ 1个工作日</span>
+            <span>👤 透明清晰</span>
           </div>
         </div>
 
         <!-- 步骤5 -->
         <div class="process-step" data-aos="fade-up">
           <div class="step-number">5</div>
-          <div class="step-content">
-            <div class="step-icon">📝</div>
-            <h3 class="step-title">合同签订</h3>
-            <p class="step-description">
-              确认报价后，签订正式工程合同，明确项目内容、工期要求、付款方式、售后服务等所有条款，保障双方权益。
-            </p>
-            <div class="step-meta">
-              <div class="step-meta-item">
-                <span>⏱</span>
-                <span>即时办理</span>
-              </div>
-              <div class="step-meta-item">
-                <span>👤</span>
-                <span>正规合同</span>
-              </div>
-            </div>
+          <div class="step-icon">📝</div>
+          <h3 class="step-title">合同签订</h3>
+          <p class="step-description">
+            确认报价后，签订正式工程合同，明确项目内容、工期要求、付款方式等
+          </p>
+          <div class="step-meta">
+            <span>⏱ 即时办理</span>
+            <span>👤 正规合同</span>
           </div>
         </div>
 
         <!-- 步骤6 -->
         <div class="process-step" data-aos="fade-up" data-aos-delay="100">
           <div class="step-number">6</div>
-          <div class="step-content">
-            <div class="step-icon">🛒</div>
-            <h3 class="step-title">设备采购</h3>
-            <p class="step-description">
-              根据合同要求，我们采购所有设备。所有设备均为正品行货，来自海康威视、大华等一线品牌，确保质量和性能。
-            </p>
-            <div class="step-meta">
-              <div class="step-meta-item">
-                <span>⏱</span>
-                <span>3-7个工作日</span>
-              </div>
-              <div class="step-meta-item">
-                <span>👤</span>
-                <span>正品保证</span>
-              </div>
-            </div>
+          <div class="step-icon">🛒</div>
+          <h3 class="step-title">设备采购</h3>
+          <p class="step-description">
+            根据合同要求采购所有设备，所有设备均为正品行货，来自海康威视、大华等一线品牌
+          </p>
+          <div class="step-meta">
+            <span>⏱ 3-7个工作日</span>
+            <span>👤 正品保证</span>
           </div>
         </div>
 
         <!-- 步骤7 -->
         <div class="process-step" data-aos="fade-up" data-aos-delay="200">
           <div class="step-number">7</div>
-          <div class="step-content">
-            <div class="step-icon">🔧</div>
-            <h3 class="step-title">安装调试</h3>
-            <p class="step-description">
-              我们的专业施工团队上门安装，严格按照标准施工，完成设备安装、线路布设、系统调试等工作，确保系统稳定运行。
-            </p>
-            <div class="step-meta">
-              <div class="step-meta-item">
-                <span>⏱</span>
-                <span>1-7个工作日</span>
-              </div>
-              <div class="step-meta-item">
-                <span>👤</span>
-                <span>专业施工</span>
-              </div>
-            </div>
+          <div class="step-icon">🔧</div>
+          <h3 class="step-title">安装调试</h3>
+          <p class="step-description">
+            专业施工团队上门安装，严格按照标准施工，完成设备安装、线路布设、系统调试等工作
+          </p>
+          <div class="step-meta">
+            <span>⏱ 1-7个工作日</span>
+            <span>👤 专业施工</span>
           </div>
         </div>
 
         <!-- 步骤8 -->
         <div class="process-step" data-aos="fade-up" data-aos-delay="300">
           <div class="step-number">8</div>
-          <div class="step-content">
-            <div class="step-icon">✅</div>
-            <h3 class="step-title">验收培训</h3>
-            <p class="step-description">
-              项目完成后，我们进行系统验收，确保所有功能正常。同时为您或您的团队提供完整的使用培训，包括系统操作、常见问题处理等。
-            </p>
-            <div class="step-meta">
-              <div class="step-meta-item">
-                <span>⏱</span>
-                <span>1-3小时</span>
-              </div>
-              <div class="step-meta-item">
-                <span>👤</span>
-                <span>免费培训</span>
-              </div>
-            </div>
+          <div class="step-icon">✅</div>
+          <h3 class="step-title">验收培训</h3>
+          <p class="step-description">
+            项目完成后进行系统验收，确保所有功能正常，同时提供完整的使用培训
+          </p>
+          <div class="step-meta">
+            <span>⏱ 1-3小时</span>
+            <span>👤 免费培训</span>
           </div>
         </div>
       </div>
@@ -552,14 +431,14 @@
   </section>
 
   <!-- 服务承诺 -->
-  <section class="guarantees">
+  <section class="guarantees-section">
     <div class="container">
       <div class="section-title" data-aos="fade-up">
         <h2>服务承诺</h2>
         <p>全程保障，安心托付</p>
       </div>
 
-      <div class="guarantee-grid">
+      <div class="guarantees-grid">
         <div class="guarantee-card" data-aos="fade-up">
           <div class="guarantee-icon">⏱</div>
           <h3 class="guarantee-title">快速响应</h3>
@@ -611,7 +490,7 @@
         </a>
         <a href="tel:13683314533" class="btn btn-secondary btn-lg">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
-            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24l5.16 2.13c.27.11.46.35.46.57l-1.24 3.11c-.12.3-.33.42-.6.24-1.02-.02-1.45.47-1.75.77-.24-.27-.53-.38-1.02-.24l-5.15 2.13c-.27.11-.46.35-.46.57.01.22.13.45.33.57l1.24 3.11c.12.3.33.42.6.24 1.02.02 1.45-.47 1.75-.77.24-.27.53-.38 1.02-.24l5.15-2.13c.27-.11.46-.35.46-.57-.01-.22-.13-.45-.33-.57l-1.24-3.11c-.12-.3-.33-.42-.6-.24-1.02.02-1.45.47-1.75.77-.24.27-.53.38 1.02.24z"/>
           </svg>
           电话咨询
         </a>
@@ -624,7 +503,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h3>悦享融创</h3>
+          <h3>北京悦享融创科技有限公司</h3>
           <p>专业安防监控解决方案提供商</p>
           <p style="font-size: 0.875rem; color: var(--text-muted);">
             悦享科技之利，融创安全之本

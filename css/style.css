@@ -505,7 +505,7 @@ a:hover {
   position: relative;
   background: var(--gradient-hero);
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 140px;
   padding-bottom: var(--spacing-3xl);
 }
 
@@ -655,6 +655,11 @@ a:hover {
   position: relative;
 }
 
+/* 第一个section增加顶部留白，避开固定导航栏 */
+section:first-of-type {
+  padding-top: calc(var(--spacing-xl) + 80px);
+}
+
 .section-title {
   text-align: center;
   margin-bottom: var(--spacing-lg);
@@ -794,6 +799,33 @@ a:hover {
 .form-textarea {
   min-height: 120px;
   resize: vertical;
+}
+
+/* 表单区域稳定显示 - 取消动画 */
+.card[data-aos*="fade"],
+.card[data-aos*="zoom"],
+.card[data-aos*="slide"] {
+  /* 表单卡片保持稳定，不应用进入动画 */
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+/* 表单容器取消hover上浮效果 */
+#contact-form .card,
+section:has(form) .card {
+  transform: none !important;
+}
+
+#contact-form .card:hover,
+section:has(form) .card:hover {
+  transform: none !important;
+}
+
+/* 输入框聚焦时防止页面跳动 */
+.form-input:focus,
+.form-textarea:focus {
+  transform: none !important;
+  scroll-margin-top: 100px;
 }
 
 /* 标签样式 */
